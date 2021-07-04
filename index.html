@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.typekit.net/tte4pdo.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="logo">
+                <img src="./images/logo1.png" alt="">
+            </div>
+        </nav>
+
+        <div class="wholeinfo">
+            <div class="tape">
+                <img src="./images/SVG/tape.png" alt="">
+            </div>
+            <div class="infoinner">
+                <div class="infoleft">
+                    <h1>I'm Joe Chuang</h1>
+                    <h2>Front-end developer & UIUX</h2>
+                    <p>Adventure & New tech & Dream</p>
+                </div>
+                <div class="inforight">
+                    <img src="./images/SVG/personal.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- 作品 -->
+        <div class="workwhole">
+            <div class="title">
+            <h1>Project</h1>
+            </div>
+            <div class="tape">
+                <img src="./images/SVG/tape.png" alt="">
+            </div>
+        <!-- 作品區 -->
+            <div class="workinner">
+                <div class="swiper-container mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+
+                            <div class="workleft">
+                                <img src="./images/work2.png" alt="" id="work">
+                                <p>Meet your stars</p>
+                                <div class="connect">
+                                <a href="https://tibamef2e.com/tfd101/project/g3/appointment" target="_blank">More</a>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="workright">
+                                <img src="./images/work1.png" alt="" id="work2">
+                                <p>床．事</p>
+                                <div class="connect">
+                                <a href="https://joechoua.github.io/bedbed/" target="_blank">More</a>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="swiper-slide">
+
+                            <div class="workright">
+                                <img src="./images/sideproject1@2x.png" alt="" id="work3">
+                                <p>side-project1: To-do-list</p>
+                                
+                            </div> 
+                        </div>
+                        <div class="swiper-slide">
+
+                            <div class="workright">
+                                <img src="./images/sideproject2@2x.png" alt="" id="work3">
+                                <p>python shooting game</p>
+                                
+                            </div> 
+                        </div>
+
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+
+                </div>
+            </div>
+        </div>
+        
+            
+        <!-- article popup -->
+        <div class="overlay_article">
+            <div class="artiflex">
+
+                <div class="articlepop">
+                    <a class="articlosebtn" href="#">&times;</a>
+                    <h2>作品概述</h2>
+                        <div class="pick">
+                            <img src="./images/appick.png" alt="">
+                            <p>選擇老師 <br> 匡線可讓使用者知道所選項目</p>
+                        </div>
+
+                        <div class="pick">
+                            <img src="./images/apdate.png" alt="">
+                            <p>選擇時間 <br> 在「可預約時段」滑動即呈現「黃色」; 點選則變更為「已預約的橘色字樣」</p>
+                        </div>
+
+                        <div class="pick">
+                            <img src="./images/apconfirm.png" alt="">
+                            <p>填寫表單 <br> 表單填寫，同時資料會更新前面所選擇之資訊 ; 也可同步會員</p>
+                        </div>
+                        
+                        <div class="pick">
+                            <img src="./images/apfinish.png" alt="">
+                            <p>完成預約 <br> 完成預約，提供確認資訊</p>
+                        </div>
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+            
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            autoplay : true,
+            delay:2000,
+            speed:500,
+            loop: true,
+            autoplayDisableOnInteraction:false,
+            scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: true,
+            
+            
+          },
+        });
+      </script>
+    
+    <script>
+
+    // article popup
+    $("#work").on("click", function (e) {
+      e.preventDefault();
+      $("div.overlay_article").fadeIn();
+    }); 
+    // $("#work2").on("click", function (e) {
+    //   e.preventDefault();
+    //   $("div.overlay_article").fadeIn();
+    // }); 
+
+    // 關閉popup
+    $("a.articlosebtn").on("click", function (e) {
+      e.preventDefault();
+      $("div.overlay_article").fadeOut();
+    });
+    </script>
+</body>
+</html>
